@@ -28,7 +28,7 @@ def run(ids):
 
     if not any(results):
         updateLog('No data after fetch. Sorry pal!')
-        raise SystemExit
+        raise SystemExit(1)
 
     for index, job in enumerate(results):
         if job:
@@ -60,13 +60,15 @@ def updateDB(taggedJson):
     
     """Inserts data inside a mongoDB"""
     
+    data = parsed(taggedJson[0], taggedJson[1])
+    
     try:
         connection = MongoClient()['ecobici']['stations']
+        connection.insert_one(data)
+        pass
     except:
-        raise SystemExit
-    
-    data = parsed(taggedJson[0], taggedJson[1])
-    connection.insert_one(data)
+        updateLog('No connection to mongo, sorry Pal!')
+        raise SystemExit(1)
 
 def parsed(station, json):
     data = {
@@ -88,6 +90,9 @@ def updateLog(msg):
     pass
 
 if __name__ == "__main__":    
+    
+    time = '{}'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    
     ids = [144,50,135,128,145,3,95,127,24,214,22,212,155,190,102,
         226,209,114,65,184,120,100,76,103,167,183,60,171,160,173,101,146,207,210,
         34,118,90,46,56,68,224,191,192,78,138,148,47,106,49,20,110,131,97,108,44,
@@ -99,6 +104,6 @@ if __name__ == "__main__":
         220,166,177,99,2,180,181,48,123,63,164,75,225,163,117,124,198,189,125,43,
         111,195,188,23,67,70,211,115,11,45,156,40,134,129,153,98,121,169,208,157]
     shuffle(ids)
+
     iterNumber = getIterNumber()
-    time = '{}'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     run(ids)

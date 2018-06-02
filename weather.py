@@ -11,7 +11,7 @@ def run():
 
     if not jobs:
         updateLog('No data was made available by fetch')
-        raise SystemExit
+        raise SystemExit(1)
 
     for data in list(jobs):
         parser(data)
@@ -21,7 +21,7 @@ def run():
         connection.insert_one(weatherObj)
     except:
         updateLog('Mongo connection failed')
-        raise SystemExit
+        raise SystemExit(1)
 
     updateLog('Success with a total of {}'.format(weatherObj['responses']))
 
