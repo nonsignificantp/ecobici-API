@@ -49,8 +49,6 @@ def fetch(addr):
     except:
         pass
 
-# ------------------------------------------------------------------------------
-
 def parser(data):
     
     """Updates the weather object. It's this ugly since weather sites are very different with each other"""
