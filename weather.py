@@ -1,3 +1,4 @@
+import os
 import re
 import requests
 from datetime import datetime
@@ -9,12 +10,15 @@ def run():
     with futures.ThreadPoolExecutor() as mmeExecutioner:
         jobs = mmeExecutioner.map(fetch, addr)
 
+    jobs = list(jobs)
+
     if not jobs:
         updateLog('No data was made available by fetch')
         raise SystemExit(1)
 
-    for data in list(jobs):
-        parser(data)
+    for data in jobs:
+        if data:
+            parser(data)
 
     try:
         connection = MongoClient()['ecobici']['weather']
@@ -29,15 +33,17 @@ def getIterNumber():
 
     """Opens the file where the counter is, reads it and lastly adds one to it"""
 
-    with open('./data/weatherData.dat', 'r') as file:
+    filepath = os.path.dirname(os.path.abspath(__file__))
+
+    with open(os.path.join(filepath, 'data/weatherData.dat'), 'r') as file:
         num = file.read().strip()
     
-    with open('./data/weatherData.dat', 'w') as file:
+    with open(os.path.join(filepath, 'data/weatherData.dat'), 'w') as file:
         file.write(str(int(num)+1))
     
     return int(num)
 
-def fetch(addr):
+def fetch(addr, flag=0):
 
     """Fetch the data from the url that it is pass inside a list together with an id string"""
 
@@ -47,7 +53,9 @@ def fetch(addr):
         response = Soup(response.text, 'html.parser')
         return [addr['station'], response]
     except:
-        pass
+        if not flag:
+            fetch(addr, 1)
+        return None
 
 def parser(data):
     
@@ -87,7 +95,9 @@ def updateLog(msg):
 
     """Log inside ./log/ informes us about the exit value of the script"""
 
-    with open('./log/weatherLog.txt', 'a+') as file:
+    filepath = os.path.dirname(os.path.abspath(__file__))
+
+    with open(os.path.join(filepath, 'log/weatherLog.txt'), 'a+') as file:
         file.write('[{}]({}): {}\n'.format(weatherObj['timestamp'], weatherObj['id'], msg))
     pass
 

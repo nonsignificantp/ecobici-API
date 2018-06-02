@@ -1,3 +1,4 @@
+import os
 import requests
 from random import shuffle
 from datetime import datetime
@@ -8,10 +9,12 @@ def getIterNumber():
 
     """Opens the file where the counter is, reads it and lastly adds one to it"""
 
-    with open('./data/stationsData.dat', 'r') as file:
+    filepath = os.path.dirname(os.path.abspath(__file__))
+
+    with open(os.path.join(filepath, 'data/stationsData.dat'), 'r') as file:
         num = file.read().strip()
     
-    with open('./data/stationsData.dat', 'w') as file:
+    with open(os.path.join(filepath, 'data/stationsData.dat'), 'w') as file:
         file.write(str(int(num)+1))
     
     return int(num)
@@ -44,7 +47,7 @@ def run(ids):
         updateLog('{} The following stations are missing: {}'.format(u'\u21b3', missing))
         pass
 
-def fetch(_id):
+def fetch(_id, flag = 0):
 
     """Fetch the data from the url that it is pass inside a list together with an id string"""
 
@@ -54,6 +57,8 @@ def fetch(_id):
         assert any(response.json())
         return [_id, response.json()]
     except:
+        if not flag: # This will catch some of the timeout errors
+            fetch(_id, 1)
         return None
 
 def updateDB(taggedJson):
@@ -71,12 +76,19 @@ def updateDB(taggedJson):
         raise SystemExit(1)
 
 def parsed(station, json):
+    
+    """Parses the data into a dict to be used as JSON when inserted into mongo"""
+    
+    bicycles = json['contenido'][3]['valor']
+    free_positions = json['contenido'][4]['valor']
+    status = json['contenido'][1]['valor']
+    
     data = {
             'id': iterNumber,
             'station': station,
-            'bicycles':json['contenido'][3]['valor'],
-            'free_positions':json['contenido'][4]['valor'],
-            'status': json['contenido'][1]['valor'],
+            'bicycles': int(bicycles) if bicycles else 0,
+            'free_positions': int(free_positions) if free_positions else 0,
+            'status': status,
             'time': time
         }
     return data
@@ -85,7 +97,9 @@ def updateLog(msg):
 
     """Log inside ./log/ informes us about the exit value of the script"""
 
-    with open('./log/stationsLog.txt', 'a+') as file:
+    filepath = os.path.dirname(os.path.abspath(__file__))
+
+    with open(os.path.join(filepath, 'log/stationsLog.txt'), 'a+') as file:
         file.write('[{}]({}): {}\n'.format(time, iterNumber, msg))
     pass
 
