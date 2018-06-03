@@ -1,0 +1,87 @@
+[2018-06-02 17:06:01](1): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:11:02](2): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:16:02](3): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:21:02](4): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:26:02](5): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:31:02](6): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:36:02](7): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:41:01](8): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:46:01](9): 198 registers were added, 0 stations didn't respond
+[2018-06-02 17:51:01](10): 193 registers were added, 5 stations didn't respond
+[2018-06-02 17:51:01](10): ↳ The following stations are missing: [34, 131, 43, 147, 110]
+[2018-06-02 17:56:02](11): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:01:01](12): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:06:01](13): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:11:01](14): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:16:02](15): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:21:02](16): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:26:01](17): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:31:02](18): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:36:04](19): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:41:02](20): 192 registers were added, 6 stations didn't respond
+[2018-06-02 18:41:02](20): ↳ The following stations are missing: [179, 204, 101, 182, 200, 114]
+[2018-06-02 18:46:02](21): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:51:03](22): 198 registers were added, 0 stations didn't respond
+[2018-06-02 18:56:01](23): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:01:01](24): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:06:01](25): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:11:01](26): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:16:02](27): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:21:02](28): 197 registers were added, 1 stations didn't respond
+[2018-06-02 19:21:02](28): ↳ The following stations are missing: [106]
+[2018-06-02 19:26:02](29): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:31:04](30): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:36:01](31): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:41:01](32): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:46:02](33): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:51:02](34): 198 registers were added, 0 stations didn't respond
+[2018-06-02 19:56:07](35): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:01:02](36): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:06:01](37): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:11:01](38): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:16:04](39): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:21:02](40): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:26:01](41): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:31:01](42): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:36:01](43): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:41:01](44): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:46:01](45): 198 registers were added, 0 stations didn't respond
+[2018-06-02 20:51:02](46): 193 registers were added, 5 stations didn't respond
+[2018-06-02 20:51:02](46): ↳ The following stations are missing: [226, 216, 1, 192, 132]
+[2018-06-02 20:56:03](47): 197 registers were added, 1 stations didn't respond
+[2018-06-02 20:56:03](47): ↳ The following stations are missing: [144]
+[2018-06-02 21:01:02](48): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:06:01](49): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:11:02](50): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:16:01](51): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:21:01](52): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:26:05](53): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:31:01](54): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:36:01](55): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:41:01](56): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:46:02](57): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:51:01](58): 198 registers were added, 0 stations didn't respond
+[2018-06-02 21:56:01](59): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:01:02](60): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:06:01](61): No data after fetch. Sorry pal!
+[2018-06-02 22:11:02](62): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:16:01](63): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:21:02](64): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:26:02](65): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:31:01](66): 197 registers were added, 1 stations didn't respond
+[2018-06-02 22:31:01](66): ↳ The following stations are missing: [101]
+[2018-06-02 22:36:01](67): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:41:01](68): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:46:02](69): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:51:01](70): 198 registers were added, 0 stations didn't respond
+[2018-06-02 22:56:01](71): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:01:02](72): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:06:02](73): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:11:02](74): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:16:01](75): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:21:01](76): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:26:01](77): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:31:02](78): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:36:01](79): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:41:01](80): 198 registers were added, 0 stations didn't respond
+[2018-06-02 23:46:01](81): 198 registers were added, 0 stations didn't respond
